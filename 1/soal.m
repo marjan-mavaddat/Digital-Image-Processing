@@ -1,0 +1,12 @@
+% img=imread('C:\Users\Marjan\Desktop\Sample Pictures\Penguins.jpg');
+img=imread('G:\MarjanMavaddat\Marjan.jpg');
+figure,imshow(img);title('this is Primary picture');
+y = imnoise(img,'salt & pepper',0.02);
+figure,imshow(y);title('this is nois picture');
+R = img(:,:,1);
+G = img(:,:,2);
+B = img(:,:,3);
+medfilimg(:,:,1) = medfilt2(R);
+medfilimg(:,:,2) = medfilt2(G);
+medfilimg(:,:,3) = medfilt2(B);
+figure,imshow(medfilimg);title('this is Improved picture');
